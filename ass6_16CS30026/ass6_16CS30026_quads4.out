@@ -1,0 +1,427 @@
+                                                                                                                                                                                                                       *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+prints              integer                  function                                     4           0           prints
+printi              integer                  function                                     4           4           printi
+readi               integer                  function                                     4           8           readi
+fib                 integer                  function                                     4           12          fib
+fun                 integer                  function                                     4           16          fun
+main                integer                  function                                     4           20          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: prints                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+c                   pointer(character)       param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: printi                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+i                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: readi                                                              Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+eP                  pointer(integer)         param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fib                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+b                   integer                  local                                        4           8           null
+t00                 integer                  temp           1                             4           12          null
+t01                 integer                  temp                                         4           16          null
+c                   integer                  local                                        4           20          null
+d                   integer                  local                                        4           24          null
+p                   integer                  local                                        4           28          null
+t02                 integer                  temp           0                             4           32          null
+t03                 integer                  temp           1                             4           36          null
+t04                 integer                  temp                                         4           40          null
+t05                 integer                  temp                                         4           44          null
+fib                 integer                  local                                        4           48          null
+t06                 integer                  temp                                         4           52          null
+t07                 integer                  temp                                         4           56          null
+t08                 integer                  temp           1                             4           60          null
+t09                 integer                  temp                                         4           64          null
+t10                 integer                  temp                                         4           68          null
+t11                 integer                  temp                                         4           72          null
+t12                 integer                  temp                                         4           76          null
+t13                 integer                  temp                                         4           80          null
+t14                 integer                  temp                                         4           84          null
+t15                 integer                  temp                                         4           88          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fun                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+i                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+p                   integer                  local                                        4           8           null
+t00                 integer                  temp           2                             4           12          null
+t01                 integer                  temp                                         4           16          null
+t02                 integer                  temp           1                             4           20          null
+t03                 integer                  temp                                         4           24          null
+t04                 integer                  temp                                         4           28          null
+fun                 integer                  local                                        4           32          null
+t05                 integer                  temp           1                             4           36          null
+t06                 integer                  temp                                         4           40          null
+t07                 integer                  temp                                         4           44          null
+t08                 integer                  temp                                         4           48          null
+t09                 integer                  temp                                         4           52          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  local                                        4           0           null
+a                   integer                  local          5                             4           4           null
+t00                 integer                  temp           5                             4           8           null
+b                   integer                  local          2                             4           12          null
+t01                 integer                  temp           2                             4           16          null
+c                   integer                  local                                        4           20          null
+ch                  character                local          'x'                           1           24          null
+t02                 character                temp           'x'                           1           25          null
+str                 pointer(character)       local                                        4           26          null
+t03                 pointer(character)       temp           "Hello World\n"               4           30          null
+t04                 pointer(NULL)            temp                                         4           34          null
+str1                pointer(character)       local                                        4           38          null
+t05                 pointer(character)       temp           "abcd"                        4           42          null
+t06                 pointer(NULL)            temp                                         4           46          null
+read                integer                  local                                        4           50          null
+e                   integer                  local                                        4           54          null
+t07                 integer                  temp                                         4           58          null
+t08                 integer                  temp                                         4           62          null
+t09                 integer                  temp                                         4           66          null
+prints              integer                  local                                        4           70          null
+t10                 pointer(character)       temp           "Please enter a number for recursive fibonacci: "4           74          null
+t11                 integer                  temp                                         4           78          null
+readi               integer                  local                                        4           82          null
+t12                 pointer(integer)         temp                                         4           86          null
+t13                 integer                  temp                                         4           90          null
+t14                 integer                  temp                                         4           94          null
+t15                 pointer(character)       temp           "You Entered "                4           98          null
+t16                 integer                  temp                                         4           102         null
+printi              integer                  local                                        4           106         null
+t17                 integer                  temp                                         4           110         null
+t18                 integer                  temp                                         4           114         null
+t19                 pointer(character)       temp           "\n"                          4           118         null
+t20                 integer                  temp                                         4           122         null
+t21                 pointer(character)       temp           "Now testing for recursive fibonacci number ....Entering the function\n"4           126         null
+t22                 integer                  temp                                         4           130         null
+out                 integer                  local          0                             4           134         null
+t23                 integer                  temp           0                             4           138         null
+fib                 integer                  local                                        4           142         null
+t24                 integer                  temp                                         4           146         null
+t25                 integer                  temp                                         4           150         null
+t26                 pointer(character)       temp           "\n\nReturned from recursive fibonacci function output is"4           154         null
+t27                 integer                  temp                                         4           158         null
+t28                 integer                  temp                                         4           162         null
+t29                 pointer(character)       temp           "\n"                          4           166         null
+t30                 integer                  temp                                         4           170         null
+t31                 pointer(character)       temp           "Please enter a number for recursive fun function: "4           174         null
+t32                 integer                  temp                                         4           178         null
+t33                 pointer(integer)         temp                                         4           182         null
+t34                 integer                  temp                                         4           186         null
+t35                 integer                  temp                                         4           190         null
+t36                 pointer(character)       temp           "You Entered "                4           194         null
+t37                 integer                  temp                                         4           198         null
+t38                 integer                  temp                                         4           202         null
+t39                 integer                  temp                                         4           206         null
+t40                 pointer(character)       temp           "\n"                          4           210         null
+t41                 integer                  temp                                         4           214         null
+t42                 pointer(character)       temp           "recursive fun function....Entering the function\n"4           218         null
+t43                 integer                  temp                                         4           222         null
+out1                integer                  local          0                             4           226         null
+t44                 integer                  temp           0                             4           230         null
+fun                 integer                  local                                        4           234         null
+t45                 integer                  temp                                         4           238         null
+t46                 integer                  temp                                         4           242         null
+t47                 pointer(character)       temp           "\n\nReturned from recursive fun function output is"4           246         null
+t48                 integer                  temp                                         4           250         null
+t49                 integer                  temp                                         4           254         null
+t50                 integer                  temp           0                             4           258         null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+L0   :	fib: 
+
+	1   :	t00 = 1
+
+	2   :	t01 = a - t00
+
+	3   :	b = t01
+
+	4   :	t02 = 0
+
+	5   :	if b <= t02 goto L8
+
+	6   :	goto L12
+
+	7   :	goto L24
+
+	8   :	t03 = 1
+
+	9   :	t04 = b + t03
+
+	10  :	p = t04
+
+	11  :	goto L24
+
+	12  :	param b
+
+	13  :	t06 = call fib, 1
+
+	14  :	c = t06
+
+	15  :	t08 = 1
+
+	16  :	t09 = b - t08
+
+	17  :	b = t09
+
+	18  :	param b
+
+	19  :	t11 = call fib, 1
+
+	20  :	d = t11
+
+	21  :	t13 = c + d
+
+	22  :	c = t13
+
+	23  :	p = c
+
+	24  :	return p
+
+	25  :	
+
+L26  :	fun: 
+
+	27  :	t00 = 2
+
+	28  :	t01 = i%t00
+
+	29  :	t02 = 1
+
+	30  :	if t01 == t02 goto L33
+
+	31  :	goto L37
+
+	32  :	goto L44
+
+	33  :	t03 = i
+
+	34  :	i = i + 1
+
+	35  :	p = t03
+
+	36  :	goto L44
+
+	37  :	t05 = 1
+
+	38  :	t06 = i - t05
+
+	39  :	param t06
+
+	40  :	t07 = call fun, 1
+
+	41  :	param t07
+
+	42  :	t08 = call fun, 1
+
+	43  :	p = t08
+
+	44  :	return p
+
+	45  :	
+
+L46  :	main: 
+
+	47  :	t00 = 5
+
+	48  :	a = t00
+
+	49  :	t01 = 2
+
+	50  :	b = t01
+
+	51  :	t02 = 'x'
+
+	52  :	ch = t02
+
+	53  :	t03 = 0
+
+	54  :	str = t03
+
+	55  :	t05 = 1
+
+	56  :	str1 = t05
+
+	57  :	if a < b goto L60
+
+	58  :	goto L63
+
+	59  :	goto L65
+
+	60  :	t07 = a
+
+	61  :	a = a + 1
+
+	62  :	goto L65
+
+	63  :	t08 = a + b
+
+	64  :	c = t08
+
+	65  :	t10 = 2
+
+	66  :	param t10
+
+	67  :	t11 = call prints, 1
+
+	68  :	t12 = &e
+
+	69  :	param t12
+
+	70  :	t13 = call readi, 1
+
+	71  :	read = t13
+
+	72  :	t15 = 3
+
+	73  :	param t15
+
+	74  :	t16 = call prints, 1
+
+	75  :	param e
+
+	76  :	t17 = call printi, 1
+
+	77  :	c = t17
+
+	78  :	t19 = 4
+
+	79  :	param t19
+
+	80  :	t20 = call prints, 1
+
+	81  :	t21 = 5
+
+	82  :	param t21
+
+	83  :	t22 = call prints, 1
+
+	84  :	t23 = 0
+
+	85  :	out = t23
+
+	86  :	param e
+
+	87  :	t24 = call fib, 1
+
+	88  :	out = t24
+
+	89  :	t26 = 6
+
+	90  :	param t26
+
+	91  :	t27 = call prints, 1
+
+	92  :	param out
+
+	93  :	t28 = call printi, 1
+
+	94  :	t29 = 7
+
+	95  :	param t29
+
+	96  :	t30 = call prints, 1
+
+	97  :	t31 = 8
+
+	98  :	param t31
+
+	99  :	t32 = call prints, 1
+
+	100 :	t33 = &e
+
+	101 :	param t33
+
+	102 :	t34 = call readi, 1
+
+	103 :	read = t34
+
+	104 :	t36 = 9
+
+	105 :	param t36
+
+	106 :	t37 = call prints, 1
+
+	107 :	param e
+
+	108 :	t38 = call printi, 1
+
+	109 :	c = t38
+
+	110 :	t40 = 10
+
+	111 :	param t40
+
+	112 :	t41 = call prints, 1
+
+	113 :	t42 = 11
+
+	114 :	param t42
+
+	115 :	t43 = call prints, 1
+
+	116 :	t44 = 0
+
+	117 :	out1 = t44
+
+	118 :	param e
+
+	119 :	t45 = call fun, 1
+
+	120 :	out1 = t45
+
+	121 :	t47 = 12
+
+	122 :	param t47
+
+	123 :	t48 = call prints, 1
+
+	124 :	param out1
+
+	125 :	t49 = call printi, 1
+
+	126 :	t50 = 0
+
+	127 :	return t50
+
+	128 :	
+
+------------------------------

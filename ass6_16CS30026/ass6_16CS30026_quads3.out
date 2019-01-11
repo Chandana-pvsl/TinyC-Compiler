@@ -1,0 +1,206 @@
+                                                                   *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+prints              integer                  function                                     4           0           prints
+printi              integer                  function                                     4           4           printi
+readi               integer                  function                                     4           8           readi
+fib                 integer                  function                                     4           12          fib
+main                integer                  function                                     4           16          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: prints                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+c                   pointer(character)       param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: printi                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+i                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: readi                                                              Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+eP                  pointer(integer)         param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fib                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+prints              integer                  local                                        4           8           null
+t00                 pointer(character)       temp           "Entering the fib function\n" 4           12          null
+t01                 integer                  temp                                         4           16          null
+f                   integer                  local          1                             4           20          null
+t02                 integer                  temp           1                             4           24          null
+f_1                 integer                  local          0                             4           28          null
+t03                 integer                  temp           0                             4           32          null
+i                   integer                  local          1                             4           36          null
+t04                 integer                  temp           1                             4           40          null
+temp                integer                  local                                        4           44          null
+t05                 integer                  temp                                         4           48          null
+t06                 integer                  temp           2                             4           52          null
+t07                 integer                  temp                                         4           56          null
+t08                 integer                  temp                                         4           60          null
+t09                 integer                  temp                                         4           64          null
+t10                 integer                  temp                                         4           68          null
+t11                 integer                  temp           1                             4           72          null
+t12                 integer                  temp                                         4           76          null
+t13                 integer                  temp                                         4           80          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  local                                        4           0           null
+prints              integer                  local                                        4           4           null
+t00                 pointer(character)       temp           "enter i: "                   4           8           null
+t01                 integer                  temp                                         4           12          null
+i                   integer                  local          0                             4           16          null
+t02                 integer                  temp           0                             4           20          null
+ep                  integer                  local                                        4           24          null
+readi               integer                  local                                        4           28          null
+t03                 pointer(integer)         temp                                         4           32          null
+t04                 integer                  temp                                         4           36          null
+t05                 integer                  temp                                         4           40          null
+t06                 pointer(character)       temp           "\n\nnumber entered:"         4           44          null
+t07                 integer                  temp                                         4           48          null
+printi              integer                  local                                        4           52          null
+t08                 integer                  temp                                         4           56          null
+t09                 pointer(character)       temp           "\ncalculating modified fibonocci numbers\n"4           60          null
+t10                 integer                  temp                                         4           64          null
+j                   integer                  local                                        4           68          null
+fib                 integer                  local                                        4           72          null
+t11                 integer                  temp                                         4           76          null
+t12                 integer                  temp                                         4           80          null
+t13                 pointer(character)       temp           "\n\nSuccesfully!! Returned from the fib function output is:"4           84          null
+t14                 integer                  temp                                         4           88          null
+t15                 integer                  temp                                         4           92          null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+L0   :	fib: 
+
+	1   :	t00 = 0
+
+	2   :	param t00
+
+	3   :	t01 = call prints, 1
+
+	4   :	t02 = 1
+
+	5   :	f = t02
+
+	6   :	t03 = 0
+
+	7   :	f_1 = t03
+
+	8   :	t04 = 1
+
+	9   :	i = t04
+
+	10  :	if i < a goto L12
+
+	11  :	goto L22
+
+	12  :	temp = f
+
+	13  :	t06 = 2
+
+	14  :	t07 = t06 * f_1
+
+	15  :	t08 = f + t07
+
+	16  :	f = t08
+
+	17  :	f_1 = temp
+
+	18  :	t11 = 1
+
+	19  :	t12 = i + t11
+
+	20  :	i = t12
+
+	21  :	goto L10
+
+	22  :	return f
+
+	23  :	
+
+L24  :	main: 
+
+	25  :	t00 = 1
+
+	26  :	param t00
+
+	27  :	t01 = call prints, 1
+
+	28  :	t02 = 0
+
+	29  :	i = t02
+
+	30  :	t03 = &ep
+
+	31  :	param t03
+
+	32  :	t04 = call readi, 1
+
+	33  :	i = t04
+
+	34  :	t06 = 2
+
+	35  :	param t06
+
+	36  :	t07 = call prints, 1
+
+	37  :	param ep
+
+	38  :	t08 = call printi, 1
+
+	39  :	t09 = 3
+
+	40  :	param t09
+
+	41  :	t10 = call prints, 1
+
+	42  :	param ep
+
+	43  :	t11 = call fib, 1
+
+	44  :	j = t11
+
+	45  :	t13 = 4
+
+	46  :	param t13
+
+	47  :	t14 = call prints, 1
+
+	48  :	param j
+
+	49  :	t15 = call printi, 1
+
+	50  :	return 
+
+	51  :	
+
+------------------------------

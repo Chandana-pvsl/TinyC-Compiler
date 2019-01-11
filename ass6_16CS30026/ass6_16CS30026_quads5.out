@@ -1,0 +1,217 @@
+                                                                     *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+prints              integer                  function                                     4           0           prints
+printi              integer                  function                                     4           4           printi
+readi               integer                  function                                     4           8           readi
+div                 void                     function                                     0           12          div
+main                integer                  function                                     4           12          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: prints                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+c                   pointer(character)       param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: printi                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+i                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: readi                                                              Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+eP                  pointer(integer)         param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: div                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  param                                        4           0           null
+b                   integer                  param                                        4           4           null
+prints              integer                  local                                        4           8           null
+t00                 pointer(character)       temp           "\n\nEntered the function \n" 4           12          null
+t01                 integer                  temp                                         4           16          null
+l                   integer                  local                                        4           20          null
+t02                 integer                  temp                                         4           24          null
+t03                 integer                  temp                                         4           28          null
+t04                 integer                  temp           0                             4           32          null
+t05                 pointer(character)       temp           "number is divisible by the other "4           36          null
+t06                 integer                  temp                                         4           40          null
+t07                 pointer(character)       temp           "number is not divisible by the other"4           44          null
+t08                 integer                  temp                                         4           48          null
+t09                 pointer(character)       temp           "\n"                          4           52          null
+t10                 integer                  temp                                         4           56          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  local                                        4           0           null
+i                   integer                  local                                        4           4           null
+j                   integer                  local          1                             4           8           null
+t00                 integer                  temp           1                             4           12          null
+k                   integer                  local                                        4           16          null
+prints              integer                  local                                        4           20          null
+t01                 pointer(character)       temp           "enter i: "                   4           24          null
+t02                 integer                  temp                                         4           28          null
+readi               integer                  local                                        4           32          null
+t03                 pointer(integer)         temp                                         4           36          null
+t04                 integer                  temp                                         4           40          null
+t05                 pointer(character)       temp           "You Entered "                4           44          null
+t06                 integer                  temp                                         4           48          null
+printi              integer                  local                                        4           52          null
+t07                 integer                  temp                                         4           56          null
+t08                 pointer(character)       temp           "enter j: "                   4           60          null
+t09                 integer                  temp                                         4           64          null
+t10                 pointer(integer)         temp                                         4           68          null
+t11                 integer                  temp                                         4           72          null
+t12                 pointer(character)       temp           "You Entered "                4           76          null
+t13                 integer                  temp                                         4           80          null
+t14                 integer                  temp                                         4           84          null
+t15                 pointer(character)       temp           "Entering the function divisible... \n"4           88          null
+t16                 integer                  temp                                         4           92          null
+div                 integer                  local                                        4           96          null
+t17                 integer                  temp                                         4           100         null
+t18                 pointer(character)       temp           "succesfully returned from function \n"4           104         null
+t19                 integer                  temp                                         4           108         null
+t20                 integer                  temp           0                             4           112         null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+L0   :	div: 
+
+	1   :	t00 = 0
+
+	2   :	param t00
+
+	3   :	t01 = call prints, 1
+
+	4   :	t02 = a%b
+
+	5   :	l = t02
+
+	6   :	t04 = 0
+
+	7   :	if l == t04 goto L10
+
+	8   :	goto L14
+
+	9   :	goto L17
+
+	10  :	t05 = 1
+
+	11  :	param t05
+
+	12  :	t06 = call prints, 1
+
+	13  :	goto L17
+
+	14  :	t07 = 2
+
+	15  :	param t07
+
+	16  :	t08 = call prints, 1
+
+	17  :	t09 = 3
+
+	18  :	param t09
+
+	19  :	t10 = call prints, 1
+
+	20  :	
+
+L21  :	main: 
+
+	22  :	t00 = 1
+
+	23  :	j = t00
+
+	24  :	t01 = 4
+
+	25  :	param t01
+
+	26  :	t02 = call prints, 1
+
+	27  :	t03 = &i
+
+	28  :	param t03
+
+	29  :	t04 = call readi, 1
+
+	30  :	t05 = 5
+
+	31  :	param t05
+
+	32  :	t06 = call prints, 1
+
+	33  :	param i
+
+	34  :	t07 = call printi, 1
+
+	35  :	t08 = 6
+
+	36  :	param t08
+
+	37  :	t09 = call prints, 1
+
+	38  :	t10 = &j
+
+	39  :	param t10
+
+	40  :	t11 = call readi, 1
+
+	41  :	t12 = 7
+
+	42  :	param t12
+
+	43  :	t13 = call prints, 1
+
+	44  :	param j
+
+	45  :	t14 = call printi, 1
+
+	46  :	t15 = 8
+
+	47  :	param t15
+
+	48  :	t16 = call prints, 1
+
+	49  :	param i
+
+	50  :	param j
+
+	51  :	t17 = call div, 2
+
+	52  :	t18 = 9
+
+	53  :	param t18
+
+	54  :	t19 = call prints, 1
+
+	55  :	t20 = 0
+
+	56  :	return t20
+
+	57  :	
+
+------------------------------

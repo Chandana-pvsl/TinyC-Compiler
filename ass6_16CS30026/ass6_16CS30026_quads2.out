@@ -1,0 +1,239 @@
+                                                                                                                     *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+prints              integer                  function                                     4           0           prints
+printi              integer                  function                                     4           4           printi
+readi               integer                  function                                     4           8           readi
+a                   integer                  local                                        4           12          null
+b                   integer                  local          1                             4           16          null
+t00                 integer                  temp           1                             4           20          null
+c                   character                local                                        1           24          null
+d                   character                local          'a'                           1           25          null
+t01                 character                temp           'a'                           1           26          null
+pro                 integer                  function                                     4           27          pro
+main                integer                  function                                     4           31          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: prints                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+c                   pointer(character)       param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: printi                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+i                   integer                  param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: readi                                                              Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+eP                  pointer(integer)         param                                        4           0           null
+return              integer                  local                                        4           4           null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: pro                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  param                                        4           0           null
+b                   integer                  param                                        4           4           null
+return              integer                  local                                        4           8           null
+ans                 integer                  local                                        4           12          null
+c                   integer                  local          2                             4           16          null
+t00                 integer                  temp           2                             4           20          null
+d                   integer                  local                                        4           24          null
+arr                 arr(10,integer)          local                                        40          28          null
+t01                 integer                  temp           10                            4           68          null
+p                   pointer(integer)         local                                        4           72          null
+prints              integer                  local                                        4           76          null
+t02                 pointer(character)       temp           "function starts here"        4           80          null
+t03                 integer                  temp                                         4           84          null
+t04                 integer                  temp                                         4           88          null
+t05                 integer                  temp                                         4           92          null
+t06                 integer                  temp           1                             4           96          null
+t07                 integer                  temp                                         4           100         null
+t08                 integer                  temp                                         4           104         null
+t09                 integer                  temp           2                             4           108         null
+t10                 integer                  temp                                         4           112         null
+t11                 integer                  temp                                         4           116         null
+t12                 integer                  temp                                         4           120         null
+t13                 integer                  temp                                         4           124         null
+t14                 pointer(character)       temp           "function ends here"          4           128         null
+t15                 integer                  temp                                         4           132         null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Category       Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  local                                        4           0           null
+c                   integer                  local          2                             4           4           null
+t00                 integer                  temp           2                             4           8           null
+d                   integer                  local                                        4           12          null
+arr                 arr(10,integer)          local                                        40          16          null
+t01                 integer                  temp           10                            4           56          null
+p                   pointer(integer)         local                                        4           60          null
+x                   integer                  local                                        4           64          null
+y                   integer                  local                                        4           68          null
+z                   integer                  local                                        4           72          null
+eP                  integer                  local                                        4           76          null
+prints              integer                  local                                        4           80          null
+t02                 pointer(character)       temp           "Enter two numbers :"         4           84          null
+t03                 integer                  temp                                         4           88          null
+ep                  integer                  local                                        4           92          null
+readi               integer                  local                                        4           96          null
+t04                 pointer(integer)         temp                                         4           100         null
+t05                 integer                  temp                                         4           104         null
+t06                 integer                  temp                                         4           108         null
+t07                 pointer(integer)         temp                                         4           112         null
+t08                 integer                  temp                                         4           116         null
+t09                 integer                  temp                                         4           120         null
+pro                 integer                  local                                        4           124         null
+t10                 integer                  temp                                         4           128         null
+t11                 integer                  temp                                         4           132         null
+t12                 pointer(character)       temp           "product of numbers +1 is equal to "4           136         null
+t13                 integer                  temp                                         4           140         null
+printi              integer                  local                                        4           144         null
+t14                 integer                  temp                                         4           148         null
+t15                 pointer(character)       temp           "\n"                          4           152         null
+t16                 integer                  temp                                         4           156         null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+	0   :	t00 = 1
+
+	1   :	b = t00
+
+	2   :	t01 = 'a'
+
+	3   :	d = t01
+
+L4   :	pro: 
+
+	5   :	t00 = 2
+
+	6   :	c = t00
+
+	7   :	t01 = 10
+
+	8   :	t02 = 0
+
+	9   :	param t02
+
+	10  :	t03 = call prints, 1
+
+	11  :	t04 = a * b
+
+	12  :	ans = t04
+
+	13  :	t06 = 1
+
+	14  :	t07 = ans + t06
+
+	15  :	ans = t07
+
+	16  :	t09 = 2
+
+	17  :	d = t09
+
+	18  :	if a >= d goto L21
+
+	19  :	goto L24
+
+	20  :	goto L26
+
+	21  :	t11 = a
+
+	22  :	a = a + 1
+
+	23  :	goto L26
+
+	24  :	t12 = a + b
+
+	25  :	c = t12
+
+	26  :	t14 = 1
+
+	27  :	param t14
+
+	28  :	t15 = call prints, 1
+
+	29  :	return ans
+
+	30  :	
+
+L31  :	main: 
+
+	32  :	t00 = 2
+
+	33  :	c = t00
+
+	34  :	t01 = 10
+
+	35  :	t02 = 2
+
+	36  :	param t02
+
+	37  :	t03 = call prints, 1
+
+	38  :	t04 = &x
+
+	39  :	param t04
+
+	40  :	t05 = call readi, 1
+
+	41  :	ep = t05
+
+	42  :	t07 = &y
+
+	43  :	param t07
+
+	44  :	t08 = call readi, 1
+
+	45  :	ep = t08
+
+	46  :	param x
+
+	47  :	param y
+
+	48  :	t10 = call pro, 2
+
+	49  :	z = t10
+
+	50  :	t12 = 3
+
+	51  :	param t12
+
+	52  :	t13 = call prints, 1
+
+	53  :	param z
+
+	54  :	t14 = call printi, 1
+
+	55  :	t15 = 4
+
+	56  :	param t15
+
+	57  :	t16 = call prints, 1
+
+	58  :	return c
+
+	59  :	
+
+------------------------------

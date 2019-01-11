@@ -1,0 +1,179 @@
+                  *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  null                          4           0          null
+fun                 function                 null                          0           4          fun
+c                   pointer(pointer(character))null                          4           4          null
+f                   arr(10,integer)          null                          40          8          null
+t00                 integer                  10                            4           48         null
+main                function                 null                          0           52         main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fun                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  null                          4           0          null
+b                   pointer(integer)         null                          4           4          null
+c                   character                null                          1           8          null
+d                   float                    null                          8           9          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  null                          4           0          null
+c                   arr(5,arr(6,float))      null                          240         4          null
+t00                 integer                  5                             4           244        null
+t01                 integer                  6                             4           248        null
+i                   integer                  null                          4           252        null
+t02                 integer                  0                             4           256        null
+t03                 integer                                                4           260        null
+t04                 integer                  4                             4           264        null
+t05                 integer                  null                          4           268        null
+t06                 integer                  null                          4           272        null
+t07                 integer                  null                          4           276        null
+t08                 integer                  1                             4           280        null
+t09                 integer                  null                          4           284        null
+t10                 integer                  null                          4           288        null
+t11                 integer                  null                          4           292        null
+printf              function                 null                          0           296        null
+t12                 pointer(character)       "f is great"                  4           296        null
+t13                 integer                  null                          4           300        null
+t14                 integer                  0                             4           304        null
+t15                 integer                  null                          4           308        null
+t16                 integer                  1                             4           312        null
+t17                 integer                  null                          4           316        null
+t18                 integer                  null                          4           320        null
+t19                 integer                  45                            4           324        null
+t20                 float                                                  8           328        null
+t21                 integer                  null                          4           336        null
+t22                 integer                  null                          4           340        null
+t23                 integer                  5                             4           344        null
+j                   integer                  null                          4           348        null
+t24                 integer                  5                             4           352        null
+t25                 integer                  null                          4           356        null
+t26                 integer                  null                          4           360        null
+t27                 integer                  null                          4           364        null
+t28                 integer                  null                          4           368        null
+t29                 float                                                  8           372        null
+t30                 integer                  null                          4           380        null
+t31                 integer                  null                          4           384        null
+t32                 integer                  0                             4           388        null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+	L0   :	t00 = 10
+
+main: 
+
+	L2   :	t00 = 5
+
+	L3   :	t01 = 6
+
+	L4   :	t02 = 0
+
+	L5   :	i = t02
+
+	L6   :	t04 = 4
+
+	L7   :	if i < t04 goto L12
+
+	L8   :	goto L25
+
+	L9   :	t05 = i
+
+	L10  :	i = i + 1
+
+	L11  :	goto L6
+
+	L12  :	t06 = i * 48
+
+	L13  :	t07 = c[t06]
+
+	L14  :	t08 = 1
+
+	L15  :	t09 = i + t08
+
+	L16  :	t10 = t09 * 48
+
+	L17  :	t11 = c[t10]
+
+	L18  :	if t07 < t11 goto L21
+
+	L19  :	goto L9
+
+	L20  :	goto L24
+
+	L21  :	param t12
+
+	L22  :	t13 = call printf, 1
+
+	L23  :	goto L9
+
+	L24  :	goto L9
+
+	L25  :	t14 = 0
+
+	L26  :	t15 = t14 * 48
+
+	L27  :	t16 = 1
+
+	L28  :	t18 = t16 * 8
+
+	L29  :	t17 = t15 + t18
+
+	L30  :	t19 = 45
+
+	L31  :	t20 = int2float(t19)
+
+	L32  :	t21 = &t15
+
+	L33  :	t22 = t21 + t17
+
+	L34  :	*t22 = t20
+
+	L35  :	t23 = 5
+
+	L36  :	if i < t23 goto L38
+
+	L37  :	goto L51
+
+	L38  :	t24 = 5
+
+	L39  :	if j < t24 goto L41
+
+	L40  :	goto L35
+
+	L41  :	t25 = i * 48
+
+	L42  :	t27 = j * 8
+
+	L43  :	t26 = t25 + t27
+
+	L44  :	t28 = i + j
+
+	L45  :	t29 = int2float(t28)
+
+	L46  :	t30 = &t25
+
+	L47  :	t31 = t30 + t26
+
+	L48  :	*t31 = t29
+
+	L49  :	goto L38
+
+	L50  :	goto L35
+
+	L51  :	t32 = 0
+
+	L52  :	retVal t32
+
+------------------------------

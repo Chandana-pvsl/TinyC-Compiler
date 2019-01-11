@@ -1,0 +1,225 @@
+                                      *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+foo                 function                 null                          0           0          foo
+logical             function                 null                          0           0          logical
+main                function                 null                          0           0          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: foo                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  null                          4           0          null
+return              integer                  null                          4           4          null
+b                   integer                  null                          4           8          null
+c                   integer                  null                          4           12         null
+t00                 integer                  10                            4           16         null
+t01                 integer                                                4           20         null
+t02                 integer                  null                          4           24         null
+t03                 integer                                                4           28         null
+t04                 integer                  null                          4           32         null
+t05                 integer                                                4           36         null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: logical                                                            Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  null                          4           0          null
+a                   integer                  5                             4           4          null
+t00                 integer                  5                             4           8          null
+b                   integer                  null                          4           12         null
+t01                 integer                  6                             4           16         null
+t02                 integer                  null                          4           20         null
+log                 integer                  null                          4           24         null
+t03                 integer                  null                          4           28         null
+t04                 integer                                                4           32         null
+t05                 integer                  null                          4           36         null
+t06                 integer                                                4           40         null
+t07                 integer                  null                          4           44         null
+t08                 integer                                                4           48         null
+t09                 integer                  null                          4           52         null
+t10                 integer                                                4           56         null
+t11                 integer                  null                          4           60         null
+t12                 integer                                                4           64         null
+t13                 integer                  0                             4           68         null
+printf              function                 null                          0           72         null
+t14                 pointer(character)       "%d"                          4           72         null
+t15                 integer                  null                          4           76         null
+t16                 integer                  10                            4           80         null
+t17                 integer                  20                            4           84         null
+t18                 integer                  10                            4           88         null
+t19                 integer                  null                          4           92         null
+t20                 integer                                                4           96         null
+t21                 integer                  1                             4           100        null
+t22                 integer                                                4           104        null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  null                          4           0          null
+g                   integer                  null                          4           4          null
+foo                 function                 null                          0           8          null
+t00                 integer                  10                            4           8          null
+t01                 integer                  null                          4           12         null
+t02                 integer                                                4           16         null
+logical             function                 null                          0           20         null
+t03                 integer                  null                          4           20         null
+t04                 integer                                                4           24         null
+t05                 integer                  0                             4           28         null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+foo: 
+
+	L1   :	t00 = 10
+
+	L2   :	b = t00
+
+	L3   :	t02 = b
+
+	L4   :	b = b + 1
+
+	L5   :	c = t02
+
+	L6   :	t04 = b - a
+
+	L7   :	c = t04
+
+	L8   :	retVal b
+
+logical: 
+
+	L10  :	t00 = 5
+
+	L11  :	a = t00
+
+	L12  :	t01 = 6
+
+	L13  :	t02 = -t01
+
+	L14  :	b = t02
+
+	L15  :	t03 = a & b
+
+	L16  :	log = t03
+
+	L17  :	t05 = a ^ b
+
+	L18  :	log = t05
+
+	L19  :	t07 = a | b
+
+	L20  :	log = t07
+
+	L21  :	goto L24
+
+	L22  :	if b == 0 goto L28
+
+	L23  :	goto L26
+
+	L24  :	if a == 0 goto L22
+
+	L25  :	goto L26
+
+	L26  :	t09 = 1
+
+	L27  :	goto L29
+
+	L28  :	t09 = 0
+
+	L29  :	log = t09
+
+	L30  :	goto L33
+
+	L31  :	if b == 0 goto L37
+
+	L32  :	goto L35
+
+	L33  :	if a == 0 goto L37
+
+	L34  :	goto L31
+
+	L35  :	t11 = 1
+
+	L36  :	goto L38
+
+	L37  :	t11 = 0
+
+	L38  :	log = t11
+
+	L39  :	t13 = 0
+
+	L40  :	if log != t13 goto L43
+
+	L41  :	goto L59
+
+	L42  :	goto L61
+
+	L43  :	param t14
+
+	L44  :	param log
+
+	L45  :	t15 = call printf, 2
+
+	L46  :	t16 = 10
+
+	L47  :	if a < t16 goto L50
+
+	L48  :	goto L61
+
+	L49  :	goto L53
+
+	L50  :	t17 = 20
+
+	L51  :	if b > t17 goto L54
+
+	L52  :	goto L61
+
+	L53  :	goto L58
+
+	L54  :	t18 = 10
+
+	L55  :	t19 = log %t18
+
+	L56  :	log = t19
+
+	L57  :	goto L61
+
+	L58  :	goto L61
+
+	L59  :	t21 = 1
+
+	L60  :	log = t21
+
+	L61  :	retVal log
+
+main: 
+
+	L63  :	t00 = 10
+
+	L64  :	param t00
+
+	L65  :	t01 = call foo, 1
+
+	L66  :	g = t01
+
+	L67  :	t03 = call logical, 0
+
+	L68  :	g = t03
+
+	L69  :	t05 = 0
+
+	L70  :	retVal t05
+
+------------------------------

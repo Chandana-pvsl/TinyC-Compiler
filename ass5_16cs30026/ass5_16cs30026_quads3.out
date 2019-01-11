@@ -1,0 +1,252 @@
+                                                             *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+ch                  character                null                          1           0          null
+main                function                 null                          0           1          main
+fun                 function                 null                          0           1          fun
+m                   function                 null                          0           1          m
+fun_ptr             function                 null                          0           1          null
+t00                 pointer(function)        null                          4           1          null
+t01                 integer                  0                             4           5          null
+fib                 function                 null                          0           9          fib
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  null                          4           0          null
+b                   integer                  null                          4           4          null
+c                   integer                  null                          4           8          null
+a                   arr(10,integer)          null                          40          12         null
+t00                 integer                  10                            4           52         null
+t01                 integer                  null                          4           56         null
+t02                 integer                                                4           60         null
+t03                 integer                  null                          4           64         null
+t04                 integer                  null                          4           68         null
+p                   pointer(float)           null                          4           72         null
+t05                 float                    null                          8           76         null
+t06                 float                    12.5                          8           84         null
+t07                 pointer(integer)         null                          4           92         null
+t08                 pointer(NULL)                                          4           96         null
+i                   integer                  null                          4           100        null
+t09                 integer                  0                             4           104        null
+j                   integer                  null                          4           108        null
+t10                 integer                  0                             4           112        null
+t11                 integer                                                4           116        null
+t12                 integer                  10                            4           120        null
+t13                 integer                  null                          4           124        null
+t14                 integer                  null                          4           128        null
+t15                 integer                  null                          4           132        null
+fun                 function                 null                          0           136        null
+t16                 integer                  15                            4           136        null
+t17                 integer                  null                          4           140        null
+k                   integer                  null                          4           144        null
+fib                 function                 null                          0           148        null
+t18                 integer                  10                            4           148        null
+t19                 integer                  null                          4           152        null
+t20                 integer                                                4           156        null
+t21                 integer                  0                             4           160        null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fun                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  null                          4           0          null
+printf              function                 null                          0           4          null
+t00                 pointer(character)       "Value of a is %d"            4           4          null
+t01                 integer                  null                          4           8          null
+f                   pointer(character)       null                          4           12         null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: m                                                                  Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+return              integer                  null                          4           0          null
+fun_ptr             pointer(void)            null                          4           4          fun_ptr
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fun_ptr                                                            Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+a                   integer                  null                          4           0          null
+return              pointer(void)            null                          4           4          null
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: fib                                                                Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+n                   integer                  null                          4           0          null
+return              integer                  null                          4           4          null
+t00                 integer                  1                             4           8          null
+t01                 integer                  1                             4           12         null
+t02                 integer                  0                             4           16         null
+t03                 integer                  0                             4           20         null
+fib                 function                 null                          0           24         null
+t04                 integer                  2                             4           24         null
+t05                 integer                  null                          4           28         null
+t06                 integer                  null                          4           32         null
+t07                 integer                  1                             4           36         null
+t08                 integer                  null                          4           40         null
+t09                 function                 null                          0           44         null
+t10                 function                                               0           44         null
+t11                 integer                  null                          4           44         null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+main: 
+
+	L1   :	t00 = 10
+
+	L2   :	t01 = b * 4
+
+	L3   :	t03 = &a
+
+	L4   :	t04 = t03 + t01
+
+	L5   :	*t04 = c
+
+	L6   :	t05 = *p
+
+	L7   :	t06 = 12.5
+
+	L8   :	*p = t06
+
+	L9   :	t07 = &b
+
+	L10  :	p = t07
+
+	L11  :	t09 = 0
+
+	L12  :	if i > t09 goto L14
+
+	L13  :	goto L28
+
+	L14  :	t10 = 0
+
+	L15  :	j = t10
+
+	L16  :	t12 = 10
+
+	L17  :	if j < t12 goto L22
+
+	L18  :	goto L11
+
+	L19  :	t13 = j
+
+	L20  :	j = j + 1
+
+	L21  :	goto L16
+
+	L22  :	t14 = i
+
+	L23  :	i = i + 1
+
+	L24  :	t15 = j
+
+	L25  :	j = j + 1
+
+	L26  :	goto L19
+
+	L27  :	goto L11
+
+	L28  :	t16 = 15
+
+	L29  :	param t16
+
+	L30  :	t17 = call fun, 1
+
+	L31  :	t18 = 10
+
+	L32  :	param t18
+
+	L33  :	t19 = call fib, 1
+
+	L34  :	k = t19
+
+	L35  :	t21 = 0
+
+	L36  :	retVal t21
+
+fun: 
+
+	L38  :	param t00
+
+	L39  :	param a
+
+	L40  :	t01 = call printf, 2
+
+m: 
+
+	L42  :	t00 = &fun
+
+	L43  :	fun_ptr = t00
+
+	L44  :	t01 = 0
+
+	L45  :	retVal t01
+
+fib: 
+
+	L47  :	t00 = 1
+
+	L48  :	if n == t00 goto L51
+
+	L49  :	goto L54
+
+	L50  :	goto L71
+
+	L51  :	t01 = 1
+
+	L52  :	retVal t01
+
+	L53  :	goto L
+
+	L54  :	t02 = 0
+
+	L55  :	if n == t02 goto L58
+
+	L56  :	goto L61
+
+	L57  :	goto L71
+
+	L58  :	t03 = 0
+
+	L59  :	retVal t03
+
+	L60  :	goto L
+
+	L61  :	t04 = 2
+
+	L62  :	t05 = n - t04
+
+	L63  :	param t05
+
+	L64  :	t06 = call fib, 1
+
+	L65  :	t07 = 1
+
+	L66  :	t08 = n - t07
+
+	L67  :	param t08
+
+	L68  :	t09 = call fib, 1
+
+	L69  :	t11 = t06 * t09
+
+	L70  :	retVal t11
+
+------------------------------

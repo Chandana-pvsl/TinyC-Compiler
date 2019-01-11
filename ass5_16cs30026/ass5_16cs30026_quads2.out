@@ -1,0 +1,319 @@
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                              *******************************************************************************************************************
+Symbol Table: Global                                                             Parent: NULL
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+main                function                 null                          0           0          main
+-------------------------------------------------------------------------------------------------------------------
+
+*******************************************************************************************************************
+Symbol Table: main                                                               Parent: Global
+-------------------------------------------------------------------------------------------------------------------
+Name                Type of symbol           Initial Value                 Size        Offset      Nested table
+-------------------------------------------------------------------------------------------------------------------
+n                   integer                  null                          4           0          null
+l1                  integer                  null                          4           4          null
+l2                  integer                  null                          4           8          null
+l3                  integer                  null                          4           12         null
+l4                  integer                  null                          4           16         null
+g                   integer                  null                          4           20         null
+z                   integer                  null                          4           24         null
+cou                 integer                  1                             4           28         null
+t00                 integer                  1                             4           32         null
+printf              function                 null                          0           36         null
+t01                 pointer(character)       "Enter n:"                    4           36         null
+t02                 integer                  null                          4           40         null
+scanf               function                 null                          0           44         null
+t03                 pointer(character)       "%d"                          4           44         null
+t04                 pointer(integer)         null                          4           48         null
+t05                 integer                  null                          4           52         null
+t06                 integer                  2                             4           56         null
+t07                 integer                  null                          4           60         null
+t08                 integer                  1                             4           64         null
+t09                 integer                  null                          4           68         null
+t10                 integer                                                4           72         null
+t11                 integer                  1                             4           76         null
+t12                 integer                  null                          4           80         null
+t13                 integer                                                4           84         null
+r                   integer                  null                          4           88         null
+t14                 integer                  2                             4           92         null
+t15                 integer                  null                          4           96         null
+t16                 integer                  0                             4           100        null
+t17                 pointer(character)       "%d"                          4           104        null
+t18                 pointer(integer)         null                          4           108        null
+t19                 function                 null                          0           112        null
+t20                 integer                  1                             4           112        null
+t21                 integer                                                4           116        null
+t22                 integer                  2                             4           120        null
+t23                 integer                  null                          4           124        null
+t24                 integer                                                4           128        null
+t25                 integer                  1                             4           132        null
+t26                 integer                                                4           136        null
+t27                 integer                  null                          4           140        null
+t28                 pointer(character)       " "                           4           144        null
+t29                 function                 null                          0           148        null
+t30                 integer                  null                          4           148        null
+t31                 integer                  1                             4           152        null
+t32                 integer                                                4           156        null
+t33                 integer                  null                          4           160        null
+t34                 pointer(character)       "%d"                          4           164        null
+t35                 function                 null                          0           168        null
+t36                 integer                  1                             4           168        null
+t37                 integer                  1                             4           172        null
+t38                 integer                  null                          4           176        null
+t39                 integer                  2                             4           180        null
+t40                 integer                  null                          4           184        null
+t41                 integer                  1                             4           188        null
+t42                 integer                                                4           192        null
+t43                 integer                  1                             4           196        null
+t44                 integer                  null                          4           200        null
+t45                 integer                  2                             4           204        null
+t46                 integer                  null                          4           208        null
+t47                 integer                  null                          4           212        null
+t48                 integer                  null                          4           216        null
+t49                 pointer(character)       "%d"                          4           220        null
+t50                 function                 null                          0           224        null
+t51                 integer                  null                          4           224        null
+t52                 integer                  1                             4           228        null
+t53                 integer                  null                          4           232        null
+t54                 integer                  2                             4           236        null
+t55                 integer                  null                          4           240        null
+t56                 integer                  null                          4           244        null
+t57                 integer                  null                          4           248        null
+j                   integer                  null                          4           252        null
+t58                 integer                  10                            4           256        null
+i                   integer                  null                          4           260        null
+t59                 integer                  null                          4           264        null
+t60                 integer                  10                            4           268        null
+-------------------------------------------------------------------------------------------------------------------
+
+******************************
+Quad Translation
+------------------------------
+main: 
+
+	L1   :	t00 = 1
+
+	L2   :	cou = t00
+
+	L3   :	param t01
+
+	L4   :	t02 = call printf, 1
+
+	L5   :	param t03
+
+	L6   :	t04 = &n
+
+	L7   :	param t04
+
+	L8   :	t05 = call scanf, 2
+
+	L9   :	t06 = 2
+
+	L10  :	t07 = n * t06
+
+	L11  :	t08 = 1
+
+	L12  :	t09 = t07 - t08
+
+	L13  :	z = t09
+
+	L14  :	t11 = 1
+
+	L15  :	t12 = n - t11
+
+	L16  :	g = t12
+
+	L17  :	t14 = 2
+
+	L18  :	t15 = r %t14
+
+	L19  :	t16 = 0
+
+	L20  :	if t15 == t16 goto L22
+
+	L21  :	goto L27
+
+	L22  :	param t17
+
+	L23  :	t18 = &r
+
+	L24  :	param t18
+
+	L25  :	t19 = call scanf, 2
+
+	L26  :	goto L17
+
+	L27  :	t20 = 1
+
+	L28  :	l1 = t20
+
+	L29  :	if l1 <= z goto L35
+
+	L30  :	goto L
+
+	L31  :	t22 = 2
+
+	L32  :	t23 = l1 + t22
+
+	L33  :	l1 = t23
+
+	L34  :	goto L29
+
+	L35  :	t25 = 1
+
+	L36  :	l2 = t25
+
+	L37  :	if l2 <= g goto L42
+
+	L38  :	goto L45
+
+	L39  :	t27 = l2
+
+	L40  :	l2 = l2 + 1
+
+	L41  :	goto L37
+
+	L42  :	param t28
+
+	L43  :	t29 = call printf, 1
+
+	L44  :	goto L39
+
+	L45  :	t30 = g
+
+	L46  :	g = g - 1
+
+	L47  :	t31 = 1
+
+	L48  :	l3 = t31
+
+	L49  :	if l3 <= l1 goto L54
+
+	L50  :	goto L102
+
+	L51  :	t33 = l3
+
+	L52  :	l3 = l3 + 1
+
+	L53  :	goto L49
+
+	L54  :	param t34
+
+	L55  :	param cou
+
+	L56  :	t35 = call printf, 2
+
+	L57  :	t36 = 1
+
+	L58  :	if l3 != t36 goto L61
+
+	L59  :	goto L99
+
+	L60  :	goto L99
+
+	L61  :	t37 = 1
+
+	L62  :	t38 = l1 + t37
+
+	L63  :	t39 = 2
+
+	L64  :	t40 = t38 / t39
+
+	L65  :	if l3 >= t40 goto L68
+
+	L66  :	goto L99
+
+	L67  :	goto L98
+
+	L68  :	t41 = 1
+
+	L69  :	l4 = t41
+
+	L70  :	t43 = 1
+
+	L71  :	t44 = l1 + t43
+
+	L72  :	t45 = 2
+
+	L73  :	t46 = t44 / t45
+
+	L74  :	if l4 < t46 goto L79
+
+	L75  :	goto L85
+
+	L76  :	t47 = l4
+
+	L77  :	l4 = l4 + 1
+
+	L78  :	goto L70
+
+	L79  :	t48 = cou
+
+	L80  :	cou = cou - 1
+
+	L81  :	param t49
+
+	L82  :	param cou
+
+	L83  :	t50 = call printf, 2
+
+	L84  :	goto L76
+
+	L85  :	t51 = cou
+
+	L86  :	cou = cou + 1
+
+	L87  :	t52 = 1
+
+	L88  :	t53 = l1 + t52
+
+	L89  :	t54 = 2
+
+	L90  :	t55 = t53 / t54
+
+	L91  :	if l4 == t55 goto L94
+
+	L92  :	goto L99
+
+	L93  :	goto L97
+
+	L94  :	t56 = l4
+
+	L95  :	l4 = l4 + 1
+
+	L96  :	goto L99
+
+	L97  :	goto L99
+
+	L98  :	goto L99
+
+	L99  :	t57 = cou
+
+	L100 :	cou = cou + 1
+
+	L101 :	goto L51
+
+	L102 :	t58 = 10
+
+	L103 :	if j > t58 goto L106
+
+	L104 :	goto L109
+
+	L105 :	goto L109
+
+	L106 :	t59 = i
+
+	L107 :	i = i + 1
+
+	L108 :	goto L109
+
+	L109 :	t60 = 10
+
+	L110 :	if i < t60 goto L102
+
+	L111 :	goto L31
+
+	L112 :	goto L31
+
+------------------------------
